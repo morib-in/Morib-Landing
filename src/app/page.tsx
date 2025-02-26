@@ -4,6 +4,16 @@
 import { motion } from 'motion/react';
 import DetailSection from '@/components/DetailSection';
 
+const DETAIL_CONTENTS = [
+  {
+    title: '몰입에 필요한\n서비스를 한 곳에서',
+    description:
+      '작업에 필요한 서비스만 등록하세요.\n당신의 업무에 맞는 분야별 서비스 추천으로\n더 효율적인 몰입 환경을 만들 수 있어요.',
+    imgSrc: '',
+    imgDescription: '',
+  },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col bg-gray-bg-00 pt-[7.7rem]">
@@ -30,7 +40,11 @@ export default function Home() {
           viewport={{ once: true }} // 한 번만 애니메이션 실행
         />
       </section>
-      <DetailSection />
+
+      {DETAIL_CONTENTS.map((content) => (
+        <DetailSection contents={content} key={content.imgSrc} />
+      ))}
+
       <section>
         <h2>
           오늘의 할 일을
