@@ -15,11 +15,17 @@ export default {
         '.title-semibold-48': {
           '@apply text-[4.8rem] font-semibold leading-normal': '',
         },
+        '.title-bold-56': {
+          '@apply text-[5.6rem] font-bold leading-130': '',
+        },
         '.title-bold-36': {
           '@apply text-[3.6rem] font-bold leading-normal': '',
         },
         '.title-bold-32': {
           '@apply text-[3.2rem] font-bold leading-normal': '',
+        },
+        '.title-bold-24': {
+          '@apply text-[2.4rem] font-bold leading-130': '',
         },
         '.title-med-32': {
           '@apply text-[3.2rem] font-medium leading-normal': '',
@@ -59,6 +65,9 @@ export default {
         },
         '.body-med-16': {
           '@apply text-[1.6rem] font-medium leading-140': '',
+        },
+        '.body-med-24': {
+          '@apply text-[2.4rem] font-medium leading-150': '',
         },
         '.body-reg-24': {
           '@apply text-[2.4rem] font-normal leading-normal': '',
@@ -127,7 +136,9 @@ export default {
       },
       lineHeight: {
         120: '120%',
+        130: '130%',
         140: '140%',
+        150: '150%',
       },
       backgroundImage: {
         'login-bg': "url('@/shared/assets/images/login_background.png')",

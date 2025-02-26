@@ -2,6 +2,8 @@
 'use client';
 
 import { motion } from 'motion/react';
+import DetailSection from '@/components/DetailSection';
+import { DETAIL_CONTENTS } from '@/constants/contents';
 
 export default function Home() {
   return (
@@ -10,7 +12,7 @@ export default function Home() {
         <div>로고</div>
         <button>다운로드</button>
       </header>
-      <section className="bg-landing h-screen w-full">
+      <section className="h-screen w-full bg-landing">
         <h1>
           당신을 위한
           <br />
@@ -29,20 +31,13 @@ export default function Home() {
           viewport={{ once: true }} // 한 번만 애니메이션 실행
         />
       </section>
-      <section>
-        <h2>
-          몰입에 필요한
-          <br />
-          서비스를 한곳에서
-        </h2>
-        <p>
-          작업에 필요한 서비스만 등록하세요.
-          <br />
-          당신의 업무에 맞는 분야별 서비스 추천으로
-          <br />더 효율적인 몰입 환경을 만들 수 있어요.
-        </p>
-        <div className="h-[790px] w-[1073px] bg-mint-02" />
-      </section>
+
+      <div className="flex flex-col gap-[6rem]">
+        {DETAIL_CONTENTS.map((content) => (
+          <DetailSection contents={content} key={content.imgSrc} />
+        ))}
+      </div>
+
       <section>
         <h2>
           오늘의 할 일을
