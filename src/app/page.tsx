@@ -32,9 +32,11 @@ export default function Home() {
         />
       </section>
 
-      {DETAIL_CONTENTS.map((content) => (
-        <DetailSection contents={content} key={content.imgSrc} />
-      ))}
+      <div className="flex flex-col gap-[6rem]">
+        {DETAIL_CONTENTS.map((content) => (
+          <DetailSection contents={content} key={content.imgSrc} />
+        ))}
+      </div>
 
       <section>
         <h2>
