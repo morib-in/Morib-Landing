@@ -24,6 +24,9 @@ export default {
         '.title-bold-32': {
           '@apply text-[3.2rem] font-bold leading-normal': '',
         },
+        '.title-bold-24': {
+          '@apply text-[2.4rem] font-bold leading-130': '',
+        },
         '.title-med-32': {
           '@apply text-[3.2rem] font-medium leading-normal': '',
         },
