@@ -147,6 +147,15 @@ export default {
         'main-gra-press': 'linear-gradient(to right, #03C2A0, #80CCCA)',
         landing: 'var(--landing_bg, radial-gradient(50% 50% at 50% 50%, #A5FFFD 0%, #2C3E47 54%, #13161B 100%))',
       },
+      animation: {
+        slogan: 'slogan 12s linear infinite',
+      },
+      keyframes: {
+        slogan: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-926px * 2))' }, // 이미지 2개 너비만큼 이동
+        },
+      },
     },
   },
 } satisfies Config;
