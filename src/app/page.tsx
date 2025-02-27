@@ -3,6 +3,7 @@
 
 import { motion } from 'motion/react';
 import DetailSection from '@/components/DetailSection';
+import InfiniteSlogan from '@/components/InfiniteSlogan';
 import { DETAIL_CONTENTS } from '@/constants/contents';
 
 export default function Home() {
@@ -32,59 +33,14 @@ export default function Home() {
         />
       </section>
 
+      <InfiniteSlogan className="pb-[4.8rem] pt-[1.8rem] sm:py-[6rem]" />
       <div className="flex flex-col gap-[6rem]">
         {DETAIL_CONTENTS.map((content) => (
           <DetailSection contents={content} key={content.imgSrc} />
         ))}
       </div>
+      <InfiniteSlogan className="pb-[4.8rem] pt-[1.8rem] sm:py-[6rem]" />
 
-      <section>
-        <h2>
-          오늘의 할 일을
-          <br /> 체계적으로
-        </h2>
-
-        <p>
-          할 일을 등록하고 몰입 시간을 확인하세요.
-          <br />
-          한눈에 보는 나의 할 일 현황으로
-          <br />
-          오늘 해야 할 일을 놓치지 않고 관리할 수 있어요.
-        </p>
-
-        <div className="h-[790px] w-[1073px] bg-mint-02" />
-      </section>
-      <section>
-        <h1>
-          온전한
-          <br />
-          몰입 시간 기록
-        </h1>
-        <p>
-          나의 온전한 몰입 시간을 기록해보세요.
-          <br />
-          허용되지 않은 서비스에 접근하면 타이머가 멈추어
-          <br />
-          몰입 시간을 정확하게 측정할 수 있어요.
-        </p>
-      </section>
-      <section>
-        <h1>
-          함께일 때 더<br />
-          깊어지는 몰입
-        </h1>
-        <p>
-          더 깊은 몰입의 순간을 만들어보세요.
-          <br />
-          실시간으로 친구들과 몰입 현황을 공유하여
-          <br />
-          서로의 성장이 동기가 될 수 있어요.
-        </p>
-      </section>
-      <section>
-        <h1>지금 바로 몰입하세요</h1>
-        <button type="button">모립 다운로드 하기</button>
-      </section>
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start"></main>
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6"></footer>
     </div>
