@@ -11,12 +11,11 @@ const InfiniteSlogan = ({ className }: Props) => {
         .slider {
           display: flex;
           will-change: transform;
-          transform: translateZ(0);
         }
 
         @media (max-width: 639px) {
           .slider {
-            animation: slideMobile 3s linear infinite;
+            animation: slideMobile 5s linear infinite;
           }
 
           @keyframes slideMobile {
