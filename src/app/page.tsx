@@ -2,15 +2,21 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Image from 'next/image';
 import DetailSection from '@/components/DetailSection';
 import { DETAIL_CONTENTS } from '@/constants/contents';
 
 export default function Home() {
   return (
     <div className="flex flex-col bg-gray-bg-00 pt-[7.7rem]">
-      <header className="fixed left-0 right-0 top-0 z-10 flex h-[7.7rem] items-center justify-between">
-        <div>로고</div>
-        <button>다운로드</button>
+      <header className="fixed left-0 right-0 top-0 z-10 flex w-100 h-[7.7rem] px-[3.2rem] py-[2rem] items-center justify-between">
+        <div className="flex items-center gap-[7px]">
+          <Image src="/logo_icon.svg" alt="logo" width={30} height={29}/>
+          <Image src="/logo_name.svg" alt="logo" width={88} height={37}/>
+        </div>
+        <button className="flex items-center justify-center gap-[0.8rem] px-[1.6rem] py-[0.8rem] rounded-[0.6rem] bg-white text-gray-01 body-bold-16 hover:bg-mint-01">
+        다운로드
+        </button>
       </header>
       <section className="h-screen w-full bg-landing">
         <h1>
@@ -86,7 +92,8 @@ export default function Home() {
         <button type="button">모립 다운로드 하기</button>
       </section>
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start"></main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6"></footer>
+      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
+      </footer>
     </div>
   );
 }
