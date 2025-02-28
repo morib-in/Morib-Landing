@@ -13,7 +13,7 @@ import { FOOTER_CONTENT } from '@/constants/contents';
 export default function Home() {
   return (
     <div className="flex flex-col bg-gray-bg-00 pt-[7.7rem]">
-      <header className="fixed left-0 right-0 top-0 z-10 flex w-100 h-[7.7rem] px-[3.2rem] py-[2rem] items-center justify-between">
+      <header className="fixed left-0 right-0 top-0 z-10 flex w-full h-[7.7rem] px-[2.4rem] py-[2rem] sm:px-[3.2rem] items-start justify-between">
         <div className="flex items-center gap-[7px]">
           <Image src="/logo_icon.svg" alt="logo" width={30} height={29}/>
           <Image src="/logo_name.svg" alt="logo" width={88} height={37}/>
@@ -55,10 +55,11 @@ export default function Home() {
       </section>
 
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start"></main>
-      <footer className="row-start-3 flex flex-wrap flex-col w-full px-[4rem] py-[8rem] justify-center items-center gap-6 bg-gray-bg-02">
-        <div className="flex w-[155.2rem] items-start gap-[40rem]">
+      
+      <footer className="row-start-3 flex flex-col w-full px-[3rem] py-[6rem] justify-center items-center gap-6 bg-gray-bg-02 sm:px-[4rem] sm:py-[8rem]">
+        <div className="flex flex-col w-full items-start gap-[6rem] lg:flex-row xl:gap-[40rem] 2xl:w-[155.2rem]">
           <FooterTitleBLock />
-          <div className="flex items-start gap-[6rem] flex-[1_0_0]">
+          <div className="flex flex-col items-start gap-[6rem] flex-[1_0_0] sm:flex-row">
           {FOOTER_CONTENT.sections.map((section, index) => (
             <FooterContentBlock key={index} title={section.title} items={section.items} />
           ))}

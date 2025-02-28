@@ -7,7 +7,7 @@ interface FooterContentProps {
 
   const FooterContentBlock = ({title, items}: FooterContentProps) => {
     return (
-      <div className="flex flex-col w-[27.4rem] gap-[2rem]">
+      <div className="flex flex-col w-full gap-[2rem]">
       <h3 className="self-stretch text-white head-bold-24">
         {title}
       </h3>
