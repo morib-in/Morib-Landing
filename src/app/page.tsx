@@ -4,7 +4,11 @@
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import DetailSection from '@/components/DetailSection';
+import FooterTitleBLock from '@/components/FooterTitleBlock';
+import FooterContentBlock from '@/components/FooterContentBlock';
 import { DETAIL_CONTENTS } from '@/constants/contents';
+import { FOOTER_CONTENT } from '@/constants/contents';
+  
 
 export default function Home() {
   return (
@@ -14,10 +18,11 @@ export default function Home() {
           <Image src="/logo_icon.svg" alt="logo" width={30} height={29}/>
           <Image src="/logo_name.svg" alt="logo" width={88} height={37}/>
         </div>
-        <button className="flex items-center justify-center gap-[0.8rem] px-[1.6rem] py-[0.8rem] rounded-[0.6rem] bg-white text-gray-01 body-bold-16 hover:bg-mint-01">
+        <button type="button" className="flex items-center justify-center gap-[0.8rem] px-[1.6rem] py-[0.8rem] rounded-[0.6rem] bg-white text-gray-01 body-bold-16 hover:bg-mint-01">
         다운로드
         </button>
       </header>
+
       <section className="h-screen w-full bg-landing">
         <h1>
           당신을 위한
@@ -45,54 +50,20 @@ export default function Home() {
       </div>
 
       <section>
-        <h2>
-          오늘의 할 일을
-          <br /> 체계적으로
-        </h2>
-
-        <p>
-          할 일을 등록하고 몰입 시간을 확인하세요.
-          <br />
-          한눈에 보는 나의 할 일 현황으로
-          <br />
-          오늘 해야 할 일을 놓치지 않고 관리할 수 있어요.
-        </p>
-
-        <div className="h-[790px] w-[1073px] bg-mint-02" />
-      </section>
-      <section>
-        <h1>
-          온전한
-          <br />
-          몰입 시간 기록
-        </h1>
-        <p>
-          나의 온전한 몰입 시간을 기록해보세요.
-          <br />
-          허용되지 않은 서비스에 접근하면 타이머가 멈추어
-          <br />
-          몰입 시간을 정확하게 측정할 수 있어요.
-        </p>
-      </section>
-      <section>
-        <h1>
-          함께일 때 더<br />
-          깊어지는 몰입
-        </h1>
-        <p>
-          더 깊은 몰입의 순간을 만들어보세요.
-          <br />
-          실시간으로 친구들과 몰입 현황을 공유하여
-          <br />
-          서로의 성장이 동기가 될 수 있어요.
-        </p>
-      </section>
-      <section>
         <h1>지금 바로 몰입하세요</h1>
         <button type="button">모립 다운로드 하기</button>
       </section>
+
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start"></main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
+      <footer className="row-start-3 flex flex-wrap flex-col w-full px-[4rem] py-[8rem] justify-center items-center gap-6 bg-gray-bg-02">
+        <div className="flex w-[155.2rem] items-start gap-[40rem]">
+          <FooterTitleBLock />
+          <div className="flex items-start gap-[6rem] flex-[1_0_0]">
+          {FOOTER_CONTENT.sections.map((section, index) => (
+            <FooterContentBlock key={index} title={section.title} items={section.items} />
+          ))}
+          </div>
+        </div>
       </footer>
     </div>
   );
