@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { BUTTON_DOWNLOAD_TEXT } from '@/constants/contents';
 
 const Header = () => {
     return (
@@ -8,7 +9,7 @@ const Header = () => {
             <Image src="/logo_name.svg" alt="모립 로고 이름" width={88} height={37}/>
         </div>
         <button type="button" className="flex items-center justify-center gap-[0.8rem] px-[1.6rem] py-[0.8rem] rounded-[0.6rem] bg-white text-gray-01 body-bold-16 hover:bg-mint-01">
-        다운로드
+        {BUTTON_DOWNLOAD_TEXT}
         </button>
         </header>
     );

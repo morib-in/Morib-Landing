@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FOOTER_CONTENT } from '@/constants/contents';
+import { BUTTON_DOWNLOAD_TEXT } from '@/constants/contents';
 
 const FooterTitleBlock = () => {
   return (
@@ -11,7 +12,7 @@ const FooterTitleBlock = () => {
           </span>  
       </div>
       <button type="button" className="flex justify-center items-center gap-[0.8rem] px-[1.6rem] py-[0.8rem] rounded-[0.6rem] bg-gray-bg-04 text-white body-bold-16">
-          다운로드
+          {BUTTON_DOWNLOAD_TEXT}
       </button>
     </div>
   );

@@ -50,6 +50,4 @@ export const FOOTER_CONTENT = {
   ],
 };
 
-
-export const BUTTON_TEXT = "다운로드";
-export const BRAND_SLOGAN = "당신을 위한 온전한 몰입 공간"
+export const BUTTON_DOWNLOAD_TEXT = "다운로드";
