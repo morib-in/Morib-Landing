@@ -5,6 +5,12 @@ interface Props {
 }
 
 const InfiniteSlogan = ({ className }: Props) => {
+  const images = Array(4).fill({
+    src: '/Layer_1.svg',
+    alt: 'slogan',
+    width: 926,
+    height: 49,
+  });
   return (
     <div className={`relative w-full overflow-hidden ${className}`}>
       <style jsx>{`
@@ -44,10 +50,16 @@ const InfiniteSlogan = ({ className }: Props) => {
         }
       `}</style>
       <div className="slider flex gap-[0.5rem] sm:gap-[2.7rem]">
-        <Image src="/Layer_1.svg" alt="slogan" width={926} height={49} className="block w-1/2" />
-        <Image src="/Layer_1.svg" alt="slogan" width={926} height={49} className="block w-1/2" />
-        <Image src="/Layer_1.svg" alt="slogan" width={926} height={49} className="block w-1/2" />
-        <Image src="/Layer_1.svg" alt="slogan" width={926} height={49} className="block w-1/2" />
+        {images.map((image, index) => (
+          <Image
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            className="block w-1/2"
+          />
+        ))}
       </div>
     </div>
   );
