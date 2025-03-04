@@ -28,3 +28,26 @@ export const DETAIL_CONTENTS = [
     imgDescription: '허용 서비스',
   },
 ];
+
+export const FOOTER_CONTENT = {
+  title_text: "당신을 위한 온전한 몰입 공간",
+  sections: [
+    {
+      title: "Contact",
+      items: [
+        { label: "Mail", value: "Morib@gmail.com" },
+        { label: "Insta", value: "gmail.com" },
+      ],
+    },
+    {
+      title: "Resource",
+      items: ["서비스 이용 약관", "개인정보 처리방침"],
+    },
+    {
+      title: "Service",
+      items: ["Team MORIB", "Copyright 2024. MORIB All rights reserved."],
+    },
+  ],
+};
+
+export const BUTTON_DOWNLOAD_TEXT = "다운로드";

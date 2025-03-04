@@ -3,16 +3,16 @@
 
 import { motion } from 'motion/react';
 import DetailSection from '@/components/DetailSection';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import InfiniteSlogan from '@/components/InfiniteSlogan';
 import { DETAIL_CONTENTS } from '@/constants/contents';
+import { FOOTER_CONTENT } from '@/constants/contents';
 
 export default function Home() {
   return (
     <div className="flex flex-col bg-gray-bg-00 pt-[7.7rem]">
-      <header className="fixed left-0 right-0 top-0 z-10 flex h-[7.7rem] items-center justify-between">
-        <div>로고</div>
-        <button>다운로드</button>
-      </header>
+      <Header />
       <section className="h-screen w-full bg-landing">
         <h1>
           당신을 위한
@@ -40,9 +40,9 @@ export default function Home() {
         ))}
       </div>
       <InfiniteSlogan className="pb-[4.8rem] pt-[1.8rem] sm:py-[6rem]" />
-
+      
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start"></main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6"></footer>
+      <Footer contents={FOOTER_CONTENT}/>
     </div>
   );
 }

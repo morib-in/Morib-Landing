@@ -57,6 +57,9 @@ export default {
         '.subhead-med-18': {
           '@apply text-[1.8rem] font-medium leading-120': '',
         },
+        '.body-bold-16': {
+          '@apply text-[1.6rem] font-bold leading-130': '',
+        },
         '.body-semibold-16': {
           '@apply text-[1.6rem] font-semibold leading-120': '',
         },
