@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import DetailSection from '@/components/DetailSection';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import InfiniteSlogan from '@/components/InfiniteSlogan';
 import { DETAIL_CONTENTS } from '@/constants/contents';
 import { FOOTER_CONTENT } from '@/constants/contents';
 
@@ -32,16 +33,14 @@ export default function Home() {
         />
       </section>
 
+      <InfiniteSlogan className="pb-[4.8rem] pt-[1.8rem] sm:py-[6rem]" />
       <div className="flex flex-col gap-[6rem]">
         {DETAIL_CONTENTS.map((content) => (
           <DetailSection contents={content} key={content.imgSrc} />
         ))}
       </div>
-
-      <section>
-        <h1>지금 바로 몰입하세요</h1>
-        <button type="button">모립 다운로드 하기</button>
-      </section>
+      <InfiniteSlogan className="pb-[4.8rem] pt-[1.8rem] sm:py-[6rem]" />
+      
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start"></main>
       <Footer contents={FOOTER_CONTENT}/>
     </div>
