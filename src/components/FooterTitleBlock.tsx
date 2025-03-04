@@ -5,7 +5,7 @@ const FooterTitleBlock = () => {
   return (
     <div className="flex flex-col items-start gap-[4rem]">
       <div className="flex flex-col items-start gap-[1.3rem]">
-        <Image src="/logo_name.svg" alt="logo" width={125} height={52}/>
+        <Image src="/logo_name.svg" alt="모립 로고 사진" width={125} height={52}/>
           <span className="text-gray-05 subhead-med-18">
             {FOOTER_CONTENT.title_text}
           </span>  
