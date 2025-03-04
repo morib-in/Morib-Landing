@@ -15,6 +15,9 @@ export default {
         '.title-semibold-48': {
           '@apply text-[4.8rem] font-semibold leading-normal': '',
         },
+        '.title-bold-72': {
+          '@apply text-[7.2rem] font-bold leading-130': '',
+        },
         '.title-bold-56': {
           '@apply text-[5.6rem] font-bold leading-130': '',
         },
