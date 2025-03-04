@@ -30,24 +30,29 @@ export const DETAIL_CONTENTS = [
 ];
 
 export const FOOTER_CONTENT = {
-  title_text: "당신을 위한 온전한 몰입 공간",
+  title_text: '당신을 위한 온전한 몰입 공간',
   sections: [
     {
-      title: "Contact",
+      title: 'Contact',
       items: [
-        { label: "Mail", value: "Morib@gmail.com" },
-        { label: "Insta", value: "gmail.com" },
+        { label: 'Mail', value: 'Morib@gmail.com' },
+        { label: 'Insta', value: 'gmail.com' },
       ],
     },
     {
-      title: "Resource",
-      items: ["서비스 이용 약관", "개인정보 처리방침"],
+      title: 'Resource',
+      items: ['서비스 이용 약관', '개인정보 처리방침'],
     },
     {
-      title: "Service",
-      items: ["Team MORIB", "Copyright 2024. MORIB All rights reserved."],
+      title: 'Service',
+      items: ['Team MORIB', 'Copyright 2024. MORIB All rights reserved.'],
     },
   ],
 };
 
-export const BUTTON_DOWNLOAD_TEXT = "다운로드";
+export const BUTTON_DOWNLOAD_TEXT = '다운로드';
+
+export const FINAL_SECTION_CONTENT = {
+  title: '지금 바로 몰입하세요',
+  downloadButtonText: '모립 다운로드 하기',
+};
