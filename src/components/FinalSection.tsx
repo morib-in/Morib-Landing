@@ -8,7 +8,7 @@ const FinalSection = () => {
         <h2 className="title-bold-32 sm:title-bold-72">지금 바로 몰입하세요</h2>
         <DownloadButton />
       </div>
-      <Image src="/section6.png" alt="섹션6 이미지" width={1440} height={1080} />
+      <Image src="/section6.svg" alt="모립 타이머 이미지" width={1440} height={1080} />
     </section>
   );
 };
