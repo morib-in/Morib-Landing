@@ -6,8 +6,8 @@ interface Props {
 
 const InfiniteSlogan = ({ className }: Props) => {
   const images = Array(4).fill({
-    src: '/Layer_1.svg',
-    alt: 'slogan',
+    src: '/slogan.svg',
+    alt: 'A WORKSPACE FOR IMMERSION - Morib slogan',
     width: 926,
     height: 49,
   });
