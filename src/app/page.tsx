@@ -2,27 +2,16 @@
 'use client';
 
 import { motion } from 'motion/react';
-import Image from 'next/image';
 import DetailSection from '@/components/DetailSection';
-import FooterTitleBLock from '@/components/FooterTitleBlock';
-import FooterContentBlock from '@/components/FooterContentBlock';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { DETAIL_CONTENTS } from '@/constants/contents';
 import { FOOTER_CONTENT } from '@/constants/contents';
-  
 
 export default function Home() {
   return (
     <div className="flex flex-col bg-gray-bg-00 pt-[7.7rem]">
-      <header className="fixed bg-gray-bg-00 left-0 right-0 top-0 z-10 flex w-full h-[7.7rem] px-[2.4rem] py-[2rem] sm:px-[3.2rem] items-start justify-between">
-        <div className="flex items-center gap-[7px]">
-          <Image src="/logo_icon.svg" alt="logo" width={30} height={29}/>
-          <Image src="/logo_name.svg" alt="logo" width={88} height={37}/>
-        </div>
-        <button type="button" className="flex items-center justify-center gap-[0.8rem] px-[1.6rem] py-[0.8rem] rounded-[0.6rem] bg-white text-gray-01 body-bold-16 hover:bg-mint-01">
-        다운로드
-        </button>
-      </header>
-
+      <Header />
       <section className="h-screen w-full bg-landing">
         <h1>
           당신을 위한
@@ -53,19 +42,8 @@ export default function Home() {
         <h1>지금 바로 몰입하세요</h1>
         <button type="button">모립 다운로드 하기</button>
       </section>
-
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start"></main>
-
-      <footer className="row-start-3 flex flex-col w-full px-[3rem] py-[6rem] justify-center items-center gap-6 bg-gray-bg-02 sm:px-[4rem] sm:py-[8rem]">
-        <div className="flex flex-col w-full items-start gap-[6rem] lg:flex-row xl:gap-[40rem] 2xl:w-[155.2rem]">
-          <FooterTitleBLock />
-          <div className="flex flex-col items-start gap-[6rem] flex-[1_0_0] sm:flex-row">
-          {FOOTER_CONTENT.sections.map((section, index) => (
-            <FooterContentBlock key={index} title={section.title} items={section.items} />
-          ))}
-          </div>
-        </div>
-      </footer>
+      <Footer contents={FOOTER_CONTENT}/>
     </div>
   );
 }
