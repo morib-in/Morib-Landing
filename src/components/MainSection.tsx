@@ -1,20 +1,19 @@
 import { motion } from 'motion/react';
 import DownloadButton from './DownloadButton';
 import Image from 'next/image';
+import { MAIN_SECTION_CONTENT } from '@/constants/contents';
 
-const FirstSection = () => {
+const MainSection = () => {
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-[3.2rem] bg-landing pt-[6rem] sm:gap-[6rem] sm:pt-[7.5rem]">
+    <section className="flex w-full flex-col items-center justify-center gap-[3.2rem] pt-[6rem] sm:gap-[6rem] sm:pt-[7.5rem]">
       <div className="flex flex-col gap-[2rem]">
         <h1 className="flex flex-col items-center justify-center text-center title-bold-32 sm:title-bold-72">
-          당신을 위한
-          <span>온전한 몰입 공간</span>
+          {MAIN_SECTION_CONTENT.title.main}
+          <span>{MAIN_SECTION_CONTENT.title.sub}</span>
         </h1>
-        <p className="sm:body-med-32 text-gray-05 detail-semibold-14">
-          시간을 소중히 여긴다면, 모립과 함께 집중해보세요.
-        </p>
+        <p className="sm:body-med-32 text-gray-05 detail-semibold-14">{MAIN_SECTION_CONTENT.description}</p>
       </div>
-      <div className="flex flex-col items-center justify-center gap-[1.4rem] sm:gap-[8rem]">
+      <div className="flex w-full flex-col items-center justify-center gap-[1.4rem] bg-landing px-[2.4rem] pb-[2.9rem] sm:gap-[8rem] sm:px-[24.2rem] sm:pb-[17.4rem]">
         <DownloadButton />
         <div className="relative">
           <Image src="/first.svg" alt="모립 홈 이미지" width={1436} height={830} />
@@ -52,4 +51,4 @@ const FirstSection = () => {
   );
 };
 
-export default FirstSection;
+export default MainSection;

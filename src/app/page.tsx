@@ -9,7 +9,7 @@ import InfiniteSlogan from '@/components/InfiniteSlogan';
 import { DETAIL_CONTENTS } from '@/constants/contents';
 import { FOOTER_CONTENT } from '@/constants/contents';
 import FinalSection from '@/components/FinalSection';
-import FirstSection from '@/components/FirstSection';
+import FirstSection from '@/components/MainSection';
 
 export default function Home() {
   return (
