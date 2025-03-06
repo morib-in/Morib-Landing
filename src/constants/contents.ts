@@ -56,3 +56,11 @@ export const FINAL_SECTION_CONTENT = {
   title: '지금 바로 몰입하세요',
   downloadButtonText: '모립 다운로드 하기',
 };
+
+export const MAIN_SECTION_CONTENT = {
+  title: {
+    main: '당신을 위한',
+    sub: '온전한 몰입 공간',
+  },
+  description: '시간을 소중히 여긴다면, 모립과 함께 집중해보세요.',
+};

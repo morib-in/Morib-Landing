@@ -75,6 +75,9 @@ export default {
         '.body-med-24': {
           '@apply text-[2.4rem] font-medium leading-150': '',
         },
+        '.body-med-32': {
+          '@apply text-[3.2rem] font-medium leading-140': '',
+        },
         '.body-reg-24': {
           '@apply text-[2.4rem] font-normal leading-normal': '',
         },
