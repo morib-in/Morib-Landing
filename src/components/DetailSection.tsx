@@ -12,7 +12,7 @@ interface Contents {
 
 const DetailSection = ({ contents }: Contents) => {
   return (
-    <section className="flex w-full flex-col gap-[2rem] py-[2rem] pl-0 sm:flex-row sm:py-0 sm:pl-[24rem]">
+    <section className="flex w-full flex-col justify-center gap-[2rem] py-[2rem] pl-0 sm:flex-row sm:py-0">
       <TextBlock title={contents.title} description={contents.description} />
       <MediaBlock imgSrc={contents.imgSrc} imgDescription={contents.imgDescription} />
     </section>

@@ -5,7 +5,7 @@ interface Props {
 
 const TextBlock = ({ title, description }: Props) => {
   return (
-    <div className="flex flex-col justify-center px-[2.4rem] sm:px-0">
+    <div className="flex flex-col justify-center px-[2.4rem] sm:px-0 sm:pl-[24rem]">
       <h2 className="mb-[0.8rem] whitespace-pre-line break-words title-bold-24 sm:mb-[4rem] sm:title-bold-56">
         {title}
       </h2>
