@@ -43,7 +43,7 @@ const MainSection = () => {
               alt="오늘의 태스크 이미지"
               width={285}
               height={773}
-              className="h-[22rem] w-auto sm:h-[83rem] sm:w-[28.5rem]"
+              className="h-[19rem] w-auto sm:h-[83rem] sm:w-[28.5rem]"
             />
           </motion.div>
         </div>
