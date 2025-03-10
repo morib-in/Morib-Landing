@@ -17,7 +17,7 @@ const MainSection = () => {
         <DownloadButton />
         <div
           className="relative h-[18.9rem] w-[32.7rem] bg-contain bg-center bg-no-repeat sm:h-[79rem] sm:w-[140rem] sm:bg-cover"
-          style={{ backgroundImage: "url('/first.svg')" }}>
+          style={{ backgroundImage: "url('/mainsection.svg')" }}>
           <motion.div
             className="absolute right-[8rem] top-[7.9rem] sm:left-[55.4rem] sm:top-[34.5rem]"
             initial={{ opacity: 0, y: 100 }}
