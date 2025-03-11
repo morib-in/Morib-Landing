@@ -13,10 +13,8 @@ const MediaBlock = ({ imgSrc, imgDescription, isActive }: Props) => {
   return (
     <motion.div
       className="hidden h-full w-full items-center justify-center md:absolute md:flex"
-      style={{
-        opacity: isActive ? 1 : 0,
-        transition: 'opacity 1s ease-in-out',
-      }}>
+      animate={{ opacity: isActive ? 1 : 0 }}
+      transition={{ duration: 1, ease: 'easeInOut' }}>
       <Image
         src={imgSrc}
         alt={imgDescription}

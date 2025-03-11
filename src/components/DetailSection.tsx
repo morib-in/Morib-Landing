@@ -19,11 +19,11 @@ const DetailSection = ({ contents }: Contents) => {
 
   return (
     <div className="flex w-full items-center justify-center">
-      <div className="md:grid md:grid-cols-12">
+      <div className="w-full md:grid md:grid-cols-12">
         <div className="flex flex-col gap-[4.8rem] md:col-span-6">
           {contents.map((content, index) => (
             <div key={index} className="px-[2.4rem] py-[2rem] md:flex md:gap-[2rem] md:p-0">
-              <TextBlock key={index} title={content.title} description={content.description} order={index} />
+              <TextBlock title={content.title} description={content.description} order={index} />
               {/* 모바일용 이미지 */}
               <div className="pt-[2.4rem] md:hidden">
                 <Image
