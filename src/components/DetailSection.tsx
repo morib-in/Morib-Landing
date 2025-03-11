@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import TextBlock from '@/components/TextBlock';
 import MediaBlock from '@/components/MediaBlock';
 
@@ -7,15 +10,65 @@ interface Contents {
     description: string;
     imgSrc: string;
     imgDescription: string;
-  };
+  }[];
 }
 
 const DetailSection = ({ contents }: Contents) => {
+  const [activeSection, setActiveSection] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('[data-order]');
+      const viewportMiddle = window.scrollY + window.innerHeight / 2;
+
+      let isActiveSection = false;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const sectionTop = window.scrollY + rect.top;
+        const sectionBottom = sectionTop + rect.height;
+
+        if (viewportMiddle >= sectionTop && viewportMiddle <= sectionBottom) {
+          const index = parseInt(section.getAttribute('data-order') || '0', 10);
+          setActiveSection(index);
+          isActiveSection = true;
+        }
+      });
+
+      if (!isActiveSection) {
+        setActiveSection(null);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <section className="flex w-full flex-col justify-center gap-[2rem] py-[2rem] pl-0 sm:flex-row sm:py-0">
-      <TextBlock title={contents.title} description={contents.description} />
-      <MediaBlock imgSrc={contents.imgSrc} imgDescription={contents.imgDescription} />
-    </section>
+    <div className="flex w-full items-center justify-center">
+      <div className="grid grid-cols-12">
+        <div className="col-span-6">
+          {contents.map((content, index) => (
+            <TextBlock key={index} title={content.title} description={content.description} order={index} />
+          ))}
+        </div>
+
+        <div className="sticky right-0 top-[7.7rem] col-span-6 col-start-7 h-[calc(100dvh-7.7rem)]">
+          {contents.map((content, index) => (
+            <MediaBlock
+              key={index}
+              imgSrc={content.imgSrc}
+              imgDescription={content.imgDescription}
+              isActive={activeSection === index}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 

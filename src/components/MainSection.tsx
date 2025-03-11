@@ -11,7 +11,7 @@ const MainSection = () => {
           {MAIN_SECTION_CONTENT.title.main}
           <span>{MAIN_SECTION_CONTENT.title.sub}</span>
         </h1>
-        <p className="sm:body-med-32 text-gray-05 detail-semibold-14">{MAIN_SECTION_CONTENT.description}</p>
+        <p className="text-gray-05 detail-semibold-14 sm:body-med-32">{MAIN_SECTION_CONTENT.description}</p>
       </div>
       <div className="flex w-full flex-col items-center justify-center gap-[1.4rem] bg-landing px-[2.4rem] pb-[2.9rem] sm:gap-[8rem] sm:px-[24.2rem] sm:pb-[17.4rem]">
         <DownloadButton />

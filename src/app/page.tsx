@@ -14,15 +14,10 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-gray-bg-00 pt-[7.7rem]">
       <Header />
-
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
         <FirstSection />
         <InfiniteSlogan className="pb-[4.8rem] pt-[1.8rem] sm:py-[6rem]" />
-        <div className="flex w-full flex-col gap-[6rem]">
-          {DETAIL_CONTENTS.map((content) => (
-            <DetailSection contents={content} key={content.imgSrc} />
-          ))}
-        </div>
+        <DetailSection contents={DETAIL_CONTENTS} />
         <InfiniteSlogan className="pb-[4.8rem] pt-[1.8rem] sm:py-[6rem]" />
         <FinalSection />
       </main>
