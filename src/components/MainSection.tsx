@@ -15,10 +15,11 @@ const MainSection = () => {
       </div>
       <div className="flex w-full flex-col items-center justify-center gap-[1.4rem] bg-landing px-[2.4rem] pb-[2.9rem] sm:gap-[8rem] sm:px-[24.2rem] sm:pb-[17.4rem]">
         <DownloadButton />
-        <div className="relative">
-          <Image src="/first.svg" alt="모립 홈 이미지" width={1436} height={830} />
+        <div
+          className="relative h-[18.9rem] w-[32.7rem] bg-contain bg-center bg-no-repeat sm:h-[79rem] sm:w-[140rem] sm:bg-cover"
+          style={{ backgroundImage: "url('/mainsection.svg')" }}>
           <motion.div
-            className="absolute right-[10.8rem] top-[9.3rem] sm:left-[56.9rem] sm:top-[36rem]"
+            className="absolute right-[8rem] top-[7.9rem] sm:left-[55.4rem] sm:top-[34.5rem]"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0 }}
@@ -32,7 +33,7 @@ const MainSection = () => {
             />
           </motion.div>
           <motion.div
-            className="absolute right-[-0.5rem] top-[1rem] sm:right-[-19rem] sm:top-[2.5rem]"
+            className="absolute right-[-0.5rem] top-[1rem] sm:right-[-3rem] sm:top-[2rem]"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -42,7 +43,7 @@ const MainSection = () => {
               alt="오늘의 태스크 이미지"
               width={285}
               height={773}
-              className="h-[22rem] w-auto sm:h-[85rem] sm:w-[60rem]"
+              className="h-[19rem] w-auto sm:h-[83rem] sm:w-[28.5rem]"
             />
           </motion.div>
         </div>
