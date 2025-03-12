@@ -11,9 +11,6 @@ importers:
       eslint:
         specifier: ^9.21.0
         version: 9.21.0(jiti@1.21.7)
-      framer-motion:
-        specifier: ^12.4.10
-        version: 12.4.10(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       motion:
         specifier: ^12.4.7
         version: 12.4.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import DownloadButton from './DownloadButton';
 import Image from 'next/image';
 import { MAIN_SECTION_CONTENT } from '@/constants/contents';
