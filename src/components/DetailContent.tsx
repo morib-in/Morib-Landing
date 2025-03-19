@@ -14,9 +14,9 @@ type DetailContentProps = {
 
 const DetailContent = ({ sectionDetails }: DetailContentProps) => {
   return (
-    <div className="flex flex-col gap-[2.4rem]">
+    <div className="flex flex-col lg:gap-[2.4rem]">
       <div
-        className="mr-[15.3rem] flex flex-col justify-center px-[2.4rem] lg:mb-[6rem] lg:h-[calc(100dvh-7.7rem)] lg:px-0 lg:pl-[24rem]"
+        className="flex flex-col justify-center px-[2.4rem] lg:mb-[6rem] lg:mr-[15.3rem] lg:h-[calc(100dvh-7.7rem)] lg:px-0 lg:pl-[24rem]"
         data-order={sectionDetails.dataOrder}>
         <h2 className="mb-[0.8rem] whitespace-pre-line title-bold-24 lg:mb-[4rem] lg:title-bold-56">
           {sectionDetails.title}
@@ -30,7 +30,7 @@ const DetailContent = ({ sectionDetails }: DetailContentProps) => {
           alt={sectionDetails.imgDescription}
           width={1073}
           height={789}
-          className="rounded-[2rem]"
+          className="rounded-[0.4rem] px-[2.4rem] pb-[2rem]"
         />
       </div>
     </div>
