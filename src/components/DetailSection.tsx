@@ -19,13 +19,13 @@ const DetailSection = ({ contents }: Contents) => {
 
   return (
     <div className="flex w-full items-center justify-center">
-      <div className="md:grid md:grid-cols-12">
-        <div className="flex flex-col gap-[4.8rem] md:col-span-6">
+      <div className="lg:grid lg:grid-cols-12">
+        <div className="flex flex-col gap-[4.8rem] lg:col-span-6">
           {contents.map((content, index) => (
-            <div key={index} className="px-[2.4rem] py-[2rem] md:flex md:gap-[2rem] md:p-0">
+            <div key={index} className="px-[2.4rem] py-[2rem] lg:flex lg:gap-[2rem] lg:p-0">
               <TextBlock title={content.title} description={content.description} order={index} />
               {/* 모바일용 이미지 */}
-              <div className="pt-[2.4rem] md:hidden">
+              <div className="pt-[2.4rem] lg:hidden">
                 <Image
                   src={content.imgSrc}
                   alt={content.imgDescription}
@@ -37,7 +37,7 @@ const DetailSection = ({ contents }: Contents) => {
             </div>
           ))}
         </div>
-        <div className="right-0 top-[7.7rem] col-span-6 col-start-7 w-full md:sticky md:h-[calc(100dvh-7.7rem)]">
+        <div className="right-0 top-[7.7rem] col-span-6 col-start-7 w-full lg:sticky lg:h-[calc(100dvh-7.7rem)]">
           <div className="relative h-full w-full">
             {contents.map((content, index) => (
               <MediaBlock
