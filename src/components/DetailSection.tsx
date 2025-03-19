@@ -1,52 +1,56 @@
 'use client';
 
-import TextBlock from '@/components/TextBlock';
 import MediaBlock from '@/components/MediaBlock';
-import Image from 'next/image';
+import DetailContent from '@/components/DetailContent';
 import useActiveSection from '@/hooks/useActiveSection';
 
-interface Contents {
-  contents: {
-    title: string;
-    description: string;
-    imgSrc: string;
-    imgDescription: string;
-  }[];
+interface SectionDetails {
+  dataOrder: number;
+  title: string;
+  description: string;
+  imgSrc: string;
+  imgDescription: string;
 }
 
-const DetailSection = ({ contents }: Contents) => {
-  const activeSection = useActiveSection();
+interface DetailContents {
+  section1: SectionDetails;
+  section2: SectionDetails;
+  section3: SectionDetails;
+  section4: SectionDetails;
+}
 
+const DetailSection = ({ detailContents }: { detailContents: DetailContents }) => {
+  const activeSection = useActiveSection();
   return (
     <div className="flex w-full items-center justify-center">
       <div className="lg:grid lg:grid-cols-12">
+        {/* 왼쪽 텍스트 & 모바일 이미지 */}
         <div className="flex flex-col gap-[4.8rem] lg:col-span-6">
-          {contents.map((content, index) => (
-            <div key={index} className="px-[2.4rem] py-[2rem] lg:flex lg:gap-[2rem] lg:p-0">
-              <TextBlock title={content.title} description={content.description} order={index} />
-              {/* 모바일용 이미지 */}
-              <div className="pt-[2.4rem] lg:hidden">
-                <Image
-                  src={content.imgSrc}
-                  alt={content.imgDescription}
-                  width={1073}
-                  height={789}
-                  className="rounded-[2rem]"
-                />
-              </div>
-            </div>
-          ))}
+          <DetailContent sectionDetails={detailContents.section1} />
+          <DetailContent sectionDetails={detailContents.section2} />
+          <DetailContent sectionDetails={detailContents.section3} />
+          <DetailContent sectionDetails={detailContents.section4} />
         </div>
+
+        {/* 오른쪽 데스크탑용 이미지 */}
         <div className="right-0 top-[7.7rem] col-span-6 col-start-7 w-full lg:sticky lg:h-[calc(100dvh-7.7rem)]">
           <div className="relative h-full w-full">
-            {contents.map((content, index) => (
-              <MediaBlock
-                key={index}
-                imgSrc={content.imgSrc}
-                imgDescription={content.imgDescription}
-                isActive={activeSection === index}
-              />
-            ))}
+            <MediaBlock
+              sectionDetails={detailContents.section1}
+              isActive={detailContents.section1.dataOrder === activeSection}
+            />
+            <MediaBlock
+              sectionDetails={detailContents.section2}
+              isActive={detailContents.section2.dataOrder === activeSection}
+            />
+            <MediaBlock
+              sectionDetails={detailContents.section3}
+              isActive={detailContents.section3.dataOrder === activeSection}
+            />
+            <MediaBlock
+              sectionDetails={detailContents.section4}
+              isActive={detailContents.section4.dataOrder === activeSection}
+            />
           </div>
         </div>
       </div>

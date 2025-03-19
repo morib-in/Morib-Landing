@@ -14,7 +14,7 @@ export default function Home() {
       <main className="row-start-2 flex flex-col items-center gap-8 lg:items-start">
         <MainSection />
         <InfiniteSlogan className="pb-[4.8rem] pt-[1.8rem] lg:py-[6rem]" />
-        <DetailSection contents={DETAIL_CONTENTS} />
+        <DetailSection detailContents={DETAIL_CONTENTS} />
         <InfiniteSlogan className="pb-[4.8rem] pt-[1.8rem] lg:py-[6rem]" />
         <FinalSection />
       </main>
