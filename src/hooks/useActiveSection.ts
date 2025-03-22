@@ -8,16 +8,14 @@ const useActiveSection = (): number | null => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('[data-order]');
-      const viewportMiddle = window.scrollY + window.innerHeight / 2;
+      const viewportMiddle = window.innerHeight / 2;
 
       let isActiveSection = false;
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        const sectionTop = window.scrollY + rect.top;
-        const sectionBottom = sectionTop + rect.height;
 
-        if (viewportMiddle >= sectionTop && viewportMiddle <= sectionBottom) {
+        if (rect.top <= viewportMiddle && rect.bottom >= viewportMiddle) {
           const index = parseInt(section.getAttribute('data-order') || '0', 10);
           setActiveSection(index);
           isActiveSection = true;
