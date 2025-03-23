@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import DownloadButton from './DownloadButton';
 import Image from 'next/image';

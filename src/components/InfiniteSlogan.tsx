@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 interface Props {
@@ -21,7 +23,7 @@ const InfiniteSlogan = ({ className }: Props) => {
 
         @media (max-width: 639px) {
           .slider {
-            animation: slideMobile 5s linear infinite;
+            animation: slideMobile 3s linear infinite;
           }
 
           @keyframes slideMobile {
