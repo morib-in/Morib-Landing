@@ -39,8 +39,8 @@ export const FOOTER_CONTENT = {
     {
       title: 'Contact',
       items: [
-        { label: 'Mail', value: 'Morib@gmail.com' },
-        { label: 'Insta', value: 'gmail.com' },
+        { label: 'Mail', value: 'morib0615@gmail.com' },
+        { label: 'Insta', value: 'https://www.instagram.com/morib.official' },
       ],
     },
     {
@@ -49,7 +49,7 @@ export const FOOTER_CONTENT = {
     },
     {
       title: 'Service',
-      items: ['Team MORIB', 'Copyright 2024. MORIB All rights reserved.'],
+      items: ['Team MORIB', 'Copyright 2025. MORIB All rights reserved.'],
     },
   ],
 };
