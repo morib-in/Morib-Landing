@@ -1,8 +1,8 @@
-interface ModalWindowDownloadProps {
+interface ModalMobileDownloadProps {
   onClose: () => void;
 }
 
-const ModalWindowDownload = ({ onClose }: ModalWindowDownloadProps) => {
+const ModalMobileDownload = ({ onClose }: ModalMobileDownloadProps) => {
 
     return (
       <div className="flex w-[32rem] flex-col items-center gap-[2rem] rounded-[0.8rem] bg-gray-bg-04 p-[2rem]">
@@ -22,4 +22,4 @@ const ModalWindowDownload = ({ onClose }: ModalWindowDownloadProps) => {
     );
 };
 
-export default ModalWindowDownload;
+export default ModalMobileDownload;
