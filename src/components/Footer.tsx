@@ -1,7 +1,7 @@
 import FooterTitleBlock from '@/components/FooterTitleBlock';
 import FooterContentBlock from '@/components/FooterContentBlock';
 
-type FooterItem = string | { label: string; value: string };
+type FooterItem = string | { label: string; value: string; src: string; } ;
 
 interface FooterContents {
     title: string;
