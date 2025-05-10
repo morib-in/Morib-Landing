@@ -31,6 +31,8 @@ const DetailContent = ({ sectionDetails }: DetailContentProps) => {
           width={1073}
           height={789}
           className="rounded-[0.4rem] px-[2.4rem] pb-[2rem]"
+          unoptimized={true}
+          loading="lazy"
         />
       </div>
     </div>
