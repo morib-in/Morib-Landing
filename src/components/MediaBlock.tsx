@@ -25,7 +25,8 @@ const MediaBlock = ({ sectionDetails, isActive }: SectionContent) => {
         alt={sectionDetails.imgDescription}
         width={1073}
         height={789}
-        className="rounded-[2rem] lg:my-[14.5rem]"
+        className="rounded-[2rem] object-contain lg:my-[14.5rem]"
+        unoptimized={true}
       />
     </motion.div>
   );
