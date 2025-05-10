@@ -27,6 +27,7 @@ const MediaBlock = ({ sectionDetails, isActive }: SectionContent) => {
         height={789}
         className="rounded-[2rem] object-contain lg:my-[14.5rem]"
         unoptimized={true}
+        loading="lazy"
       />
     </motion.div>
   );
