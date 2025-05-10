@@ -24,11 +24,14 @@ const Header = () => {
         }
     };
 
+    const handleClickLogo = () => {
+        router.push('/');
+    }
 
     return (
         <>
         <header className="fixed bg-gray-bg-00 left-0 right-0 top-0 z-10 flex w-full h-[7.7rem] px-[2.4rem] py-[2rem] sm:px-[3.2rem] items-start justify-between">
-        <div className="flex items-center gap-[7px]">
+        <div className="flex items-center gap-[7px]" onClick ={handleClickLogo} >
             <Image src="/logo_icon.svg" alt="모립 로고 사진" width={30} height={29}/>
             <Image src="/logo_name.svg" alt="모립 로고 이름" width={88} height={37}/>
         </div>
