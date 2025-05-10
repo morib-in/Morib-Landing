@@ -1,4 +1,4 @@
-import { FEATURE_LIST, DOWNLOAD_MORIB_APP } from '@/constants/contents';
+import { FEATURE_LIST } from '@/constants/contents';
 import FeatureBlock from './FeatureBlock';
 import DownloadServiceButton from './DownloadServiceSection';
 
@@ -12,7 +12,7 @@ const DownloadSection = () => {
         </p>
       </div>
       <FeatureBlock featureList={FEATURE_LIST} />
-      <DownloadServiceButton downloadServices={DOWNLOAD_MORIB_APP} />
+      <DownloadServiceButton />
     </section>
   );
 };
