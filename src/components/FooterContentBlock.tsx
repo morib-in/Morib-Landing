@@ -1,4 +1,6 @@
-type FooterItem = string | { label: string; value: string; src: string; };
+type FooterItem =
+  | string
+  | { label: string; value: string; src?: string };
 
 interface FooterContentProps {
   title: string;

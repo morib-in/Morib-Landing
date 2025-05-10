@@ -39,7 +39,7 @@ export const FOOTER_CONTENT = {
     {
       title: 'Contact',
       items: [
-        { label: 'Mail', value: 'morib0615@gmail.com' },
+        { label: 'Mail', value: 'morib0615@gmail.com', },
         { label: 'Insta', value: 'https://www.instagram.com/morib.official' },
       ],
     },
@@ -47,7 +47,7 @@ export const FOOTER_CONTENT = {
       title: 'Resource',
       items: [
         { label: '서비스 이용 약관', value: '', src: 'https://phase-cheek-9f3.notion.site/' },
-        { label: '개인정보 처리방침', valeu: '', src: 'https://phase-cheek-9f3.notion.site/718a1dfd45b247989946883e802b5768' },
+        { label: '개인정보 처리방침', value: '', src: 'https://phase-cheek-9f3.notion.site/718a1dfd45b247989946883e802b5768' },
       ],
     },
     {
