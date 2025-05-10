@@ -1,4 +1,4 @@
-type FooterItem = string | { label: string; value: string };
+type FooterItem = string | { label: string; value: string; src: string; };
 
 interface FooterContentProps {
   title: string;
@@ -20,9 +20,9 @@ const FooterContentBlock = ({title, items}: FooterContentProps) => {
         </li>
         ) : (
         <li key={index} className="flex items-center gap-[2rem] self-stretch">
-          <span className="self-stretch text-gray-04 subhead-med-18">
+          <a className="self-stretch text-gray-04 subhead-med-18" href={item.src}>
             {item.label}
-          </span>
+          </a>
           <span className="self-stretch text-gray-04 subhead-med-18">
             {item.value}
           </span>

@@ -45,7 +45,10 @@ export const FOOTER_CONTENT = {
     },
     {
       title: 'Resource',
-      items: ['서비스 이용 약관', '개인정보 처리방침'],
+      items: [
+        { label: '서비스 이용 약관', value: '', src: 'https://phase-cheek-9f3.notion.site/' },
+        { label: '개인정보 처리방침', valeu: '', src: 'https://phase-cheek-9f3.notion.site/718a1dfd45b247989946883e802b5768' },
+      ],
     },
     {
       title: 'Service',
