@@ -21,8 +21,8 @@ const DownloadServiceSection = () => {
       const response = await fetch('https://api.morib.in/api/v2/s3/presigned-url');
       const data = await response.json();
       setDownloadUrl({
-        silicon: data[1].url,
-        universal: data[0].url,
+        silicon: data[0].url,
+        universal: data[1].url,
         intel: data[2].url,
       });
     };
@@ -44,7 +44,7 @@ const DownloadServiceSection = () => {
         <DownloadServiceButton
           iconSrc="/logo_apple.svg"
           iconAlt="애플 로고 아이콘"
-          downloadUrl={downloadUrl.silicon === '' ? undefined : downloadUrl.universal}
+          downloadUrl={downloadUrl.silicon === '' ? undefined : downloadUrl.silicon}
           ariaLabel="macOS용 다운로드(Apple Silicon)">
           macOS용 다운로드(Apple Silicon)
         </DownloadServiceButton>
@@ -52,7 +52,7 @@ const DownloadServiceSection = () => {
         <DownloadServiceButton
           iconSrc="/logo_apple.svg"
           iconAlt="애플 로고 아이콘"
-          downloadUrl={downloadUrl.intel === '' ? undefined : downloadUrl.universal}
+          downloadUrl={downloadUrl.intel === '' ? undefined : downloadUrl.intel}
           ariaLabel="macOS용 다운로드(Intel 기반 Mac)">
           macOS용 다운로드(Intel 기반 Mac)
         </DownloadServiceButton>
