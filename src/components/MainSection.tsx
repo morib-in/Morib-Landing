@@ -1,11 +1,31 @@
 'use client';
 
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'motion/react';
 import DownloadButton from './DownloadButton';
+import ModalWrapper from './ModalWrapper';
+import ModalMobileDownload from './ModalMobileDownload';
 import Image from 'next/image';
 import { MAIN_SECTION_CONTENT } from '@/constants/contents';
 
 const MainSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => setIsModalOpen(true);
+  const handleModalClose = () => setIsModalOpen(false);  
+
+  const router = useRouter();
+
+  const handleClickDownload= () => {
+    if (window.innerWidth <= 768) {
+      handleModalOpen();
+    } else {
+      router.push('/download');
+    }
+  };
+;
+  
   return (
     <section className="flex w-full flex-col items-center justify-center gap-[3.2rem] pt-[6rem] sm:gap-[6rem] sm:pt-[7.5rem]">
       <div className="flex flex-col gap-[2rem]">
@@ -16,7 +36,13 @@ const MainSection = () => {
         <p className="text-gray-05 detail-semibold-14 sm:body-med-32">{MAIN_SECTION_CONTENT.description}</p>
       </div>
       <div className="flex w-full flex-col items-center justify-center gap-[1.4rem] bg-landing px-[2.4rem] pb-[2.9rem] sm:gap-[8rem] sm:px-[24.2rem] sm:pb-[17.4rem]">
-        <DownloadButton />
+        <DownloadButton onClickDownload={handleClickDownload} />
+        {isModalOpen && (
+        <ModalWrapper onClose={handleModalClose}>
+          <ModalMobileDownload onClose={handleModalClose}/>
+        </ModalWrapper>
+      )}
+
         <div
           className="relative h-[18.9rem] w-[32.7rem] bg-contain bg-center bg-no-repeat sm:h-[79rem] sm:w-[140rem] sm:bg-cover"
           style={{ backgroundImage: "url('/mainsection.svg')" }}>
