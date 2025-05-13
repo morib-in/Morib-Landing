@@ -18,7 +18,7 @@ const DownloadServiceSection = () => {
 
   useEffect(() => {
     const fetchDownloadUrl = async () => {
-      const response = await fetch('https://api.morib.in/api/v2/s3/presigned-url');
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/v2/s3/presigned-url`);
       const data = await response.json();
       setDownloadUrl({
         silicon: data[0].url,

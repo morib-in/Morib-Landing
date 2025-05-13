@@ -33,7 +33,7 @@ const WindowsDownloadDialog = () => {
 
   const submitEmail = async (email: string) => {
     try {
-      const response = await fetch('https://api.morib.in/api/v2/waiting/windows', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/v2/waiting/windows`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
