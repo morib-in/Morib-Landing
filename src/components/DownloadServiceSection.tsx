@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { CONFIG } from '../constants/config';
 import ModalWrapper from './ModalWrapper';
 import ModalWindowDownload from './ModalWindowDownload';
 import DownloadServiceButton from './DownloadServiceButton';
@@ -18,7 +19,7 @@ const DownloadServiceSection = () => {
 
   useEffect(() => {
     const fetchDownloadUrl = async () => {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/v2/s3/presigned-url`);
+      const response = await fetch(`${CONFIG.API_URL}api/v2/s3/presigned-url`);
       const data = await response.json();
       setDownloadUrl({
         silicon: data[0].url,

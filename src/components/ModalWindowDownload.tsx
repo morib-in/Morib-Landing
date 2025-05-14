@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { CONFIG } from '@/constants/config';
 
 const WindowsDownloadDialog = () => {
   const [email, setEmail] = useState('');
@@ -33,7 +34,7 @@ const WindowsDownloadDialog = () => {
 
   const submitEmail = async (email: string) => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/v2/waiting/windows`, {
+      const response = await fetch(`${CONFIG.API_URL}api/v2/waiting/windows`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
