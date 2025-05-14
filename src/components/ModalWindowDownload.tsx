@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { CONFIG } from '@/constants/config';
+import { CONFIG } from '../../next.config';
 
 const WindowsDownloadDialog = () => {
   const [email, setEmail] = useState('');
